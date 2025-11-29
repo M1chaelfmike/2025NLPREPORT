@@ -190,7 +190,9 @@ This mode incorporates reasoning and self-checking functions, enabling verificat
 
 \section{User interface design}
 
-This system implements an interactive user interface based on the terminal, aiming to provide users with a simple and intuitive way to query and display results. Users input query questions through the command line, and the system will execute the retrieval and generation process according to the user's selection, ultimately returning the generated answers and related documents. The interface design supports various retrieval methods and generation modes, and can flexibly respond to different query requirements.\\
+This system implements an interactive user interface, including both terminal UI and GUI, aiming to provide users with a simple and intuitive way to query and display results. For the terminal UI, users input query questions through the command line, and the system will execute the retrieval and generation process based on the user's selection, ultimately returning the generated answers and related documents. Users input query questions through the command line, and the system will execute the retrieval and generation process based on the user's selection, ultimately returning the generated answers and related documents. In the interface design of the GUI, it supports the selection of various retrieval methods and generation modes, as well as the visualization of the Intermediate Workflow and retrieved document, and can flexibly meet different query requirements.
+
+\subsection{Terminal UI}
 The user first enters the query question through the terminal. The system offers three main retrieval methods for selection: BM25, Dense, and Hybrid. The user can choose the appropriate retrieval method according to their needs.
 
 \begin{figure}[H]
@@ -217,6 +219,50 @@ After the system is completed, a selection interface will be provided for users 
 \caption{User interface for command selection.}
 \label{Commands}
 \end{figure}
+
+\subsection{GUI}
+Users first select six retrieval methods according to their own needs through the user interface: BM25, Static, Dense, Idense, Hybrid and Multivector.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\textwidth]{figures/GUIRetrievalMethod.png} 
+\caption{User interface for GUI retrieval method selection.}
+\label{GUIRetrievalMethod}
+\end{figure}
+
+After that, users can freely adjust Hybrid Alpha to control the weight of the results from the two different search methods in the hybrid search strategy.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\textwidth]{figures/HybridAlpha.png} 
+\caption{User interface for adjusting Hybrid Alpha in GUI.}
+\label{HybridAlpha}
+\end{figure}
+
+After that, users can choose among three generation modes according to their needs: basic single-round RAG (basic type), multi-round conversation, and agent workflow (agent type).
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\textwidth]{figures/ModelSelection.png} 
+\caption{User interface for generation mode selection in GUI.}
+\label{ModelSelection}
+\end{figure}
+
+Subsequently, the currently selected model can also be visually displayed in the user interface.
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\textwidth]{figures/RAGModelSelection.png} 
+\caption{User interface for displaying selected generation mode in GUI.}
+\label{RAGModelSelection}
+\end{figure}
+After the user completes the system configuration, they can then ask questions, or visualize the Intermediate Workflow and retrieved document.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth]{figures/GUI.png} 
+\caption{User interface in GUI.}
+\label{GUI}
+\end{figure}
+
 
 
 
