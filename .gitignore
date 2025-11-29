@@ -1,0 +1,47 @@
+# Git ignore for LaTeX project
+
+# LaTeX intermediate files
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.nav
+*.snm
+*.vrb
+*.idx
+*.ilg
+*.ind
+*.bbl
+*.blg
+*.brf
+*.thm
+*.run.xml
+*.auxlock
+
+# LaTeX build directory
+build/
+
+# Editor / OS files
+.DS_Store
+Thumbs.db
+.vscode/
+*.swp
+*~
+*.bak
+
+# Python / Notebook
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Other temporary files
+*.tmp
+*.orig
+
+# Temporary files
+*.tmp
